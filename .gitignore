@@ -10,6 +10,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+spring-docker
 
 # External tool builders
 .externalToolBuilders/
