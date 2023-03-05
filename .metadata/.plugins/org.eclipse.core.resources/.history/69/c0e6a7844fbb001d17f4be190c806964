@@ -1,0 +1,33 @@
+package test;
+
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+
+public class DES {
+	
+	public static void main(String[] args) throws Exception {
+		// 明文
+		String plainTest = "Hello World!";
+		
+		// 產生密鑰
+		KeyGenerator keyGen = KeyGenerator.getInstance("DES");
+		keyGen.init(56);
+		SecretKey secretKey = keyGen.generateKey();
+		// 使用密鑰加密明文
+		Cipher cipher = Cipher.getInstance("DES");
+		cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+		byte[] encrytedData = cipher.doFinal(plainTest.getBytes());
+		String encrytedBase64Data = Base64.getEncoder().encodeToString(encrytedData)
+		System.out.println("Encrypted text: " + encrytedBase64Data);
+		// 儲存
+		// 將 encrytedBase64Data 存入資料庫
+		// 使用密鑰解密明文
+		
+		
+	}
+	
+}
