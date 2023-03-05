@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\a0909\OneDrive\桌面\資料區\security_coding\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3630941530.index
-\WebSecure\src\main\java
